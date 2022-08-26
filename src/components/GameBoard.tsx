@@ -46,11 +46,9 @@ const GameBoard: FC = () => {
   useEffect(() => {
     //@ts-ignore
     setRandomWord(word.randomize().toUpperCase());
-    console.log(word);
   }, [word]);
 
   useEffect(() => {
-    console.log(input);
     if (input === word && input !== "") {
       setTime(difficulty === "easy" ? 30 : difficulty === "hard" ? 10 : 20);
       setScore((prev) => prev + 1);
